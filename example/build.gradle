@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.0'
+
+    defaultConfig {
+        applicationId "com.jmolsmobile.landscapevideocapture_sample"
+        minSdkVersion 10
+        targetSdkVersion 22
+        versionCode 13
+        versionName "1.1.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile project(':library')
+
+//    compile 'com.github.JeroenMols:LandscapeVideoCamera:1.1.4'
+}

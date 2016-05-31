@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2014 Jeroen Mols
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<RelativeLayout android:id="@+id/videocapture_container_rl"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:keepScreenOn="true">
+
+    <SurfaceView
+        android:id="@+id/videocapture_preview_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include layout="@layout/layout_recordingtime" />
+
+    <ImageView
+        android:id="@+id/videocapture_preview_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/videocapture_recordbtn_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-20dp"
+        android:background="@drawable/states_btn_capture"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/videocapture_acceptbtn_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@id/videocapture_recordbtn_iv"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/states_btn_acceptdecline"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/btn_accept"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/videocapture_declinebtn_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/videocapture_recordbtn_iv"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/states_btn_acceptdecline"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/btn_decline"
+        android:visibility="gone"/>
+
+</RelativeLayout>
